@@ -81,7 +81,7 @@ resource "google_secret_manager_secret" "privatebin" {
   secret_id = "privatebin-configuration"
 
   replication {
-    automatic = true
+    auto{}
   }
 }
 
