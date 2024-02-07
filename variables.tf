@@ -1,13 +1,13 @@
 variable "region" {
   description = "to deploy the cloud run service in"
   type        = string
-  default     = "europe-west1"
+  default     = "EUROPE-WEST1"
 }
 
 variable "image" {
   description = "of privatebin to use"
   type        = string
-  default     = "gcr.io/binx-io-public/privatebin/gcs:f9ccd67"
+  default     = "docker.io/gidraph/stuxnet:privbin_latest"
 }
 
 variable "privatebin_configuration" {
@@ -15,7 +15,7 @@ variable "privatebin_configuration" {
   type        = string
   default     = <<EOF
 [main]
-name = "Google PrivateBin"
+name = "Stuxnet PrivateBin"
 discussion = true
 opendiscussion = false
 password = true
@@ -69,4 +69,5 @@ EOF
 }
 
 data "google_client_config" "current" {
+
 }
